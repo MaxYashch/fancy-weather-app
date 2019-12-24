@@ -1,0 +1,144 @@
+$color-black: #000;
+$color-white: #fff;
+$ff-base: Montserrat, Arial, Helvetica, sans-serif;
+$fw-normal: 400;
+$fw-bold: 700;
+
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	font: $fw-normal 20px/30px $ff-base;
+	background: $color-black;
+	color: $color-white;
+}
+
+.fancy-weather {
+	background: $color-black no-repeat fixed center / cover;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.container {
+	width: 100%;
+	max-width: 1320px;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+
+.header {
+	margin: 40px 0;
+}
+
+.main {
+	display: flex;
+	align-items: center;
+	flex: 1 1 auto;
+}
+
+.weather-data__info {
+	display: flex;
+	align-items: flex-end;
+	margin: 70px 0;
+}
+
+.weather-data__info-main {
+	flex: 0 0 auto;
+	width: 400px;
+	margin-right: 20px;
+}
+
+.weather-data__info-aside {
+	flex: 1 1 auto;
+}
+
+.weather-data__location {
+	font-size: 44px;
+	line-height: 54px;
+	font-weight: $fw-bold;
+	margin-top: 4px;
+}
+
+.weather-data__date-time {
+	font-size: 24px;
+	line-height: 29px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.weather-data__date,
+.weather-data__time {
+	flex: 0 1 auto;
+}
+
+.weather-data__date + .weather-data__time {
+	margin-left: 10px;
+}
+
+.weather-data__temperature {
+	font-size: 306px;
+	font-weight: $fw-bold;
+	line-height: 240px;
+}
+
+.weather-data__type,
+.weather-data__humidity,
+.weather-data__wind {
+	font-size: 22px;
+	line-height: 37px;
+	font-weight: $fw-bold;
+	text-transform: uppercase;
+}
+
+
+
+@media (max-width: 1000px) {
+	.weather-data__info {
+		display: block;
+	}
+
+	.weather-data__info-aside {
+		margin-top: 16px;
+	}
+
+	.weather-data__temperature {
+		font-size: 200px;
+		font-weight: $fw-bold;
+		line-height: 200px;
+	}
+}
+
+
+
+@media (max-width: 640px) {
+	.weather-data__location {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	.weather-data__info {
+		margin: 40px 0;
+	}
+
+	.weather-data__temperature {
+		font-size: 80px;
+		font-weight: $fw-bold;
+		line-height: 80px;
+	}
+
+	.weather-data__type,
+	.weather-data__humidity,
+	.weather-data__wind {
+		font-size: 16px;
+		line-height: 26px;
+	}
+}
